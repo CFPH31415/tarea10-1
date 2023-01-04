@@ -1,0 +1,18 @@
+<form>
+    <div class="form-group">
+        <label class="form-control "  for="task-name">Nombre de la tarea:</label>
+        <input class="form-control" type="text" id="task-name" [(ngModel)]="taskName" name="taskName">
+        <br>
+        <label for="task-description">Descripción de la tarea:</label>
+        <textarea class="form-control" type="text" id="task-description" [(ngModel)]="taskDescription" name="taskDescription"></textarea>
+        <br>
+        <button class="btn btn-primary" (click)="addTask()">Agregar tarea</button>
+    
+      
+      <br>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let task of tasks">{{ task.name }} - {{ task.description }}</li>
+      </ul>
+    </div>
+    </form>
+    
